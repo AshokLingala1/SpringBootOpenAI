@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: spring-ai-backend
+    env: java
+    plan: free
+    buildCommand: "./mvnw clean install"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: SPRING_AI_OPENAI_API_KEY
+        value: your-real-api-key
+      - key: SERVER_PORT
+        value: 10000
